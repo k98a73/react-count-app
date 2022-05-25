@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css';
+import Button from './Button';
 
 function App() {
 
@@ -17,12 +18,6 @@ function App() {
       />
     </div>
   );
-}
-
-function Button(props) {
-  return (
-    <button onClick={props.btn_click}>{props.btn_txt}</button>
-  )
 }
 
 export default App;
