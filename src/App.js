@@ -1,16 +1,20 @@
+import React, { useState } from 'react'
 import './App.css';
 
 function App() {
+
+  const [count, setCount] = useState(0);
   return (
     <div className="App">
-      <Button btn_txt="クリックしてね" />
+      <p>カウント：{count}</p>
+      <Button btn_click={() => { setCount(count + 1) }} btn_txt="クリックしてね" />
     </div>
   );
 }
 
 function Button(props) {
   return (
-    <button>{props.btn_txt}</button>
+    <button onClick={props.btn_click}>{props.btn_txt}</button>
   )
 }
 
